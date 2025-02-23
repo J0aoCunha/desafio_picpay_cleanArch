@@ -3,15 +3,15 @@ export class User {
 
     private constructor(private props: userProps){}
 
-    public static create(name: string, email: string, cpf_cnpj: string, endereco: string, password:string){
+    public static create(name: string, email: string, cpf_cnpj: string, endereco: string, password:string, money: number, user_type: string){
         return new User({
             id: crypto.randomUUID(),
             name,
             email,
+            password,
+            money,
             cpf_cnpj,
             endereco,
-            money: 0,
-            password,
             user_type: 'user'
         });
     }
