@@ -20,7 +20,7 @@ export class CreateUserUseCase implements UseCase<CreateUserInputDTO, CreateUser
             endereco,
             password,
             money,
-            user_type ?? 'user'
+            user_type 
         );
         
         await this.userGateway.save(aUser);
@@ -35,7 +35,9 @@ export class CreateUserUseCase implements UseCase<CreateUserInputDTO, CreateUser
     private presentOutput(user: User): CreateUserOutputDTO {
         const output : CreateUserOutputDTO = {
             id: user.id,
-            name: user.name
+            name: user.name,
+            email: user.email,
+            user_type: user.userType 
         }
 
         return output

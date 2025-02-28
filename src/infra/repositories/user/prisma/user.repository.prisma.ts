@@ -36,7 +36,7 @@ export class UserRepositoryPrisma implements UserGateway{
                 money: u.money,
                 cpf_cnpj: u.cpf_cnpj,
                 endereco: u.endereco,
-                user_type: u.user_type as 'user' | 'lojista' | undefined
+                user_type: u.user_type as 'user' | 'lojista'
             })
             return user;
         })

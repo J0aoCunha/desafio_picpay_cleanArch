@@ -31,7 +31,9 @@ export class ListUserUseCase implements UseCase<ListUserInputDTO, ListUserOutput
                     name: user.name,
                     email: user.email,
                     money: user.money,
-                    cpf_cnpj: user.cpf_cnpj
+                    cpf_cnpj: user.cpf_cnpj,
+                    user_type: user.userType,
+                    endereco: user.endereco,
                 }
             })
         }

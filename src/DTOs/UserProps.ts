@@ -6,5 +6,5 @@ export type userProps = {
     cpf_cnpj: string,
     endereco: string,
     password: string, 
-    user_type?: 'user' | 'lojista'
+    user_type: 'user' | 'lojista'
 }

@@ -12,6 +12,13 @@ export class CreateUserRoute implements Route{
         private readonly createUserService: CreateUserUseCase
     ){}
 
+    public static create(createUserService: CreateUserUseCase){
+        return new CreateUserRoute(
+            '/users', 
+            HttpMethod.POST, 
+            createUserService
+        );}
+
    public  getHandle(){
         return async (request: Request, response: Response) =>{
             const {name, email, password, money, cpf_cnpj, endereco, user_type} = request.body;

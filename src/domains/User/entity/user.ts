@@ -12,7 +12,7 @@ export class User {
             money,
             cpf_cnpj,
             endereco,
-            user_type: 'user'
+            user_type: (user_type === 'user' || user_type === 'lojista') ? user_type : 'user'
         });
     }
 

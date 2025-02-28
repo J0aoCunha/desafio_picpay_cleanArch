@@ -5,5 +5,5 @@ export type CreateUserInputDTO = {
     endereco: string;
     money: number;
     cpf_cnpj: string;
-    user_type?: string;
+    user_type: string;
 };
